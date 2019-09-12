@@ -1,21 +1,22 @@
-package cn.demo.reverseProxy;
+package cn.demo.configServer;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.config.server.EnableConfigServer;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
-import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
 
 /**
  * @Author: Leo
  * @Blog: http://blog.csdn.net/lc0817
- * @CreateTime: 2016/11/22 21:32
+ * @CreateTime: 2016/12/4 22:52
  * @Description:
  */
 @SpringBootApplication
-@EnableZuulProxy
+@EnableConfigServer
 @EnableEurekaClient
-public class Application {
+public class ConfigServerApplication {
+
     public static void main(String[] args) {
-        SpringApplication.run(Application.class, args);
+        SpringApplication.run(ConfigServerApplication.class, args);
     }
 }
